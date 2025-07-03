@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/view/styles.css">
+</head>
+<body>
+    <div class="special-center">
+        <form id="login-form">
+            <input type="email" placeholder="email" id="email">
+            <input type="password" placeholder="senha" id="senha">
+            <button id="submit" type="submit">Entrar</button>
+        </form>
+        <div id="mensagem">
+
+        </div>
+    </div>
+    <script>
+        const loginform = document.getElementById('login-form')
+        const btn = document.getElementById('submit')
+        
+
+        loginform.addEventListener('submit', function(e){
+            const email = document.getElementById('email').value
+            const senha = document.getElementById('senha').value
+
+        })
+    </script>
+</body>
+</html>
