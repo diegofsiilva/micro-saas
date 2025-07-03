@@ -9,8 +9,8 @@
 <body>
     <div class="special-center">
         <form id="login-form">
-            <input type="email" placeholder="email" id="email">
-            <input type="password" placeholder="senha" id="senha">
+            <input type="email" placeholder="email" id="email" required>
+            <input type="password" placeholder="senha" id="senha" required>
             <button id="submit" type="submit">Entrar</button>
         </form>
         <div id="mensagem">
@@ -18,13 +18,17 @@
         </div>
     </div>
     <script>
+        const url = 'https://twccquhvvvlijzosgxuq.supabase.com'
+        const anon = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR3Y2NxdWh2dnZsaWp6b3NneHVxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE1NTU4MzksImV4cCI6MjA2NzEzMTgzOX0.3KcNF_1GCem0VC5-Esl0RRozBmqCEjM7v9AL0xwumbE'
         const loginform = document.getElementById('login-form')
         const btn = document.getElementById('submit')
         
 
         loginform.addEventListener('submit', function(e){
+            e.preventDefault()
             const email = document.getElementById('email').value
             const senha = document.getElementById('senha').value
+            document.getElementById('mensagem').textContent = "Tentando acessar com o email " + email
 
         })
     </script>
